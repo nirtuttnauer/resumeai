@@ -1,0 +1,120 @@
+{
+    "name": "Nir Tuttnauer",
+    "title": "Software Developer",
+    "email": "nir.tuttnauer@gmail.com",
+    "phone": "+972502052803",
+    "location": "Rishon Lezion",
+    "linkedin": "https://www.linkedin.com/in/nir-tuttnauer/",
+    "github": "https://github.com/nirtuttnauer",
+    "profile": "Dedicated software developer with a strong foundation in computer science and a keen interest in leveraging machine learning to solve complex problems. Experienced in full-stack web development, mobile app development, and cloud technologies. Proficient in Swift, Java, JavaScript, Python, and modern frameworks like React and TensorFlow. Known for excellent problem-solving skills and a detail-oriented approach.",
+    "education": "Bachelor of Science: Computer Science, College of Management Academic Studies, 2022 – Present | Israel",
+    "projects": [
+        {
+            "title": "Palm Phrase: Sign Language Translation App",
+            "date": "2024",
+            "github": "https://github.com/Decoded-Solutions/PalmPhrase",
+            "details": [
+                "Led the development of a video chat app translating sign language to text using Expo SDK 50.",
+                "Implemented real-time video processing and text rendering using React Native.",
+                "Integrated with cloud services for scalable processing and storage."
+            ]
+            
+        },
+        {
+            "title": "Chest X-Ray Pneumonia and Covid-19 Detection",
+            "date": "2024",
+            "github": "https://github.com/nirtuttnauer/Covid-Detector-in-Chest-x-ray/",
+            "details": [
+                "The trained model achieves a high accuracy in detecting pneumonia from chest X-ray images. Detailed results and visualizations can be found in the test.ipynb notebook.",
+                "The models for Covid-19 detection showed significant performance, with binary classification achieving over 89% accuracy and multi-class classification reaching 82% accuracy.",
+                "Anomaly detection and KNN classification further enhanced the robustness of the system."    
+            ]
+        },
+        {
+            "title": "Probabilistic Error Spam Filter",
+            "date": "2024",
+            "github": "https://github.com/nirtuttnauer/probablistic-error-spam-filter",
+            "details": [
+                "The Probabilistic Error Spam Filter is an advanced data structure project designed for efficiently classifying email addresses as spam or not spam. It utilizes Bloom Filters and Skip Lists to manage spam detection with a focus on minimizing error rates."
+            ]
+        },
+        {
+            "title": "Hex Game CLI",
+            "date": "2024",
+            "details": ["The Hex Game is a strategic board game implemented in Python. It involves two players, 'red' and 'blue', who alternately place their colored stones on a hexagonal grid. The objective is for a player to form an unbroken chain of stones between two opposite sides of the board. The game uses advanced data structures, including disjoint sets, to manage game state and determine the winner efficiently."],
+            "github": "https://github.com/nirtuttnauer/hex-game"
+        },
+        {
+            "title": "BookScrabble",
+            "date": "2023",
+            "details": ["BookScrabble is a word game that challenges players to create words from a set of letters. The game is implemented in JavaFX and java with a dictionary lookup for valid words. Players can compete against each other, with LFU and LRU and Bloom Filter caching strategies to optimize performance."],
+            "github": "https://github.com/nirtuttnauer/Scrabble-PTM2"
+        },
+        {
+            "title": "AI Resume Tailor",
+            "date": "2024",
+            "details": ["The AI Resume Tailor is a web application that uses ChatGPT to analyze and optimize resumes for job applications. The system provides personalized data for improving resume content, structure, and keywords to increase the chances of selection by applicant tracking systems."],
+            "github": "https://github.com/nirtuttnauer"
+        }
+        ],
+        "experience": [
+            {
+                "title": "Intern",
+                "company": "DevClub",
+                "dates": "2022 – 2023",
+                "duties": [
+                    "Gained proficiency in advanced web development technologies such as React.js, Express, and MongoDB through comprehensive training at DevClub. ",
+                    "Received mentorship to become a Full Stack Developer."
+                ]
+            },
+            {
+                "title": "Photographer & Designer",
+                "company": "Self Employed",
+                "dates": "2011 – 2021",
+                "duties": [
+                    "Successfully managed a freelance photography and design business, enhancing client satisfaction and business growth."
+                ]
+            }
+        ],
+        "certifications": [{
+            "title":"iOS & Swift - The Complete iOS App Development Bootcamp, Udemy",
+            "date": "2023",
+            "details": ["Developed multiple iOS applications using Swift, integrating APIs, implementing user authentication, machine learning (ML), augmented reality (AR), and utilizing Figma. Skilled in iOS app development, UI/UX design, and framework integration."]
+        }
+        ],
+        "awards": [
+        {
+            "title":"Third Place at Hackathon, Oracle & College of Management Academic Studies",
+            "date": "2023",
+            "details": ["Led a team to secure third place in the Oracle & College of Management Academic Studies hackathon (Apr. 2023) by developing and presenting an AI-based corn disease prediction software on the Oracle cloud platform. Demonstrated effective communication, quick problem-solving, and exceptional teamwork skills."]
+        }
+        ],
+        "army":{
+            "title": "IAF Photographer",
+            "dates": "2016 – 2018",
+            "rank": "Corporal, IAF"
+        },
+        "skills": {
+            "Python": ["TensorFlow", "Pandas", "Numpy", "Matplotlib"],
+            "JavaScript/Node.js": ["Express", "JavaScript"],
+            "Java": ["JavaFX", "Threadpooling", "Socket Programming"],
+            "Swift": ["SwiftUI", "ARKit", "MLKit"],
+            "C++": ["Data Structures", "Algorithms", "OOP"],
+            "C": ["Embedded Systems"],
+            "React": ["React.js", "React Hooks", "Next.js", "React Native", "Expo", "EAS CLI"],
+            "SQL": ["MySQL", "MSSQL", "SQLite"],
+            "NoSQL": ["MongoDB", "Mongoose"],
+            "Backend as a Service (BaaS)": ["Firebase", "Supabase"],
+            "DevOps": ["AWS", "Terraform", "Ansible", "GitHub Actions", "Docker", "Selenium"]
+        },
+        "languages": [
+            {
+                "language": "Hebrew",
+                "proficiency": "Native"
+            },
+            {
+                "language": "English",
+                "proficiency": "Fluent"
+            }
+        ]
+    }

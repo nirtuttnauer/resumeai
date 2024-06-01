@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+            font-size: 13px;
+        }
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .contact {
+            flex: 1;
+        }
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #007acc;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #007acc;
+        }
+        .header p {
+            display: inline-block;
+            margin: 3px 5px;
+            font-size: 12px;
+        }
+        .header a {
+            color: #007acc;
+            text-decoration: none;
+        }
+        .section {
+            margin-bottom: 10px;
+        }
+        .section h2 {
+            border-bottom: 2px solid #007acc;
+            padding-bottom: 3px;
+            color: #007acc;
+            font-size: 18px;
+        }
+        .section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .section ul li {
+            margin-bottom: 5px;
+        }
+        .section ul li strong {
+            display: block;
+            font-size: 15px;
+            color: #333;
+        }
+        .section ul li span {
+            font-size: 10px;
+            color: #666;
+        }
+        .skills, .languages {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .skills li, .languages li {
+            background-color: #e0e0e0;
+            padding: 4px 8px;
+            margin: 3px;
+            border-radius: 4px;
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>{{ name }}</h1>
+            <p>{{ title }}</p>
+            <div class="contact">
+                <p>Email: <a href="mailto:{{ email }}">{{ email }}</a></p>
+                <p>Phone: {{ phone }}</p>
+                <p>Location: {{ location }}</p>
+                <p>LinkedIn: <a href="{{ linkedin }}">{{ linkedin }}</a></p>
+                <p>GitHub: <a href="{{ github }}">{{ github }}</a></p>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Profile</h2>
+            <p>{{ profile }}</p>
+        </div>
+        <div class="section">
+            <h2>Education</h2>
+            <p>{{ education }}</p>
+        </div>
+        <div class="section">
+            <h2>Projects</h2>
+            <ul>
+                {% for project in projects %}
+                <li>
+                    <a href="{{ project.github }}"><strong>{{ project.title }}</strong></a> - <span>{{ project.date }}</span>
+                    <ul>
+                        {% for detail in project.details %}
+                        <li>{{ detail }}</li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Experience</h2>
+            <ul>
+                {% for job in experience %}
+                <li>
+                    <strong>{{ job.title }}</strong> at {{ job.company }} ({{ job.dates }})
+                    <ul>
+                        {% for duty in job.duties %}
+                        <li>{{ duty }}</li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Certifications</h2>
+            <ul>
+                {% for cert in certifications %}
+                <li><strong>{{ cert.title }}</strong> - <span>{{ cert.date }}</span>
+                    <ul>
+                        {% for detail in cert.details %}
+                        <li>{{ detail }}</li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Awards</h2>
+            <ul>
+                {% for award in awards %}
+                <li><strong>{{ award.title }}</strong> - <span>{{ award.date }}</span>
+                    <ul>
+                        {% for detail in award.details %}
+                        <li>{{ detail }}</li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Army Service</h2>
+            <ul>
+                <li><strong>{{ army.title }}</strong></li>
+                <li>Rank: {{ army.rank }}</li>
+                <li>Dates: {{ army.dates }}</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Skills</h2>
+            <ul class="skills">
+                {% for category, items in skills.items() %}
+                    <li>
+                        {{ category }}: {% if items %}{{ items | join(", ") }}{% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Languages</h2>
+            <ul class="languages">
+                {% for language in languages %}
+                    <li>{{ language.language }}: {{ language.proficiency }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
