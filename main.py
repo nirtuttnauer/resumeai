@@ -187,8 +187,8 @@ def main():
             
             # Render the HTML content with the curated data
             html_content = render_template(template_path, data)
-        # Configure pdfkit with the path to wkhtmltopdf
-        config = pdfkit.configuration(wkhtmltopdf='/usr/bin/wkhtmltopdf')
+        # Let pdfkit locate wkhtmltopdf on PATH across supported platforms.
+        config = pdfkit.configuration()
         
         # Save the rendered HTML as a PDF
         save_pdf(html_content, output_path, config=config)
