@@ -6,9 +6,10 @@ This project generates a resume in PDF format using a combination of data from a
 
 Ensure you have the following software installed:
 
-- Docker
 - Python 3.x
 - pip
+- `wkhtmltopdf`, installed separately and available on your `PATH` (check with `wkhtmltopdf --version`). The `pdfkit` Python package does not include this executable.
+- Docker only if using the optional development container
 
 ## Installation
 
@@ -71,7 +72,17 @@ To generate the resume, run the `main.py` script:
 python main.py
 ```
 
-This will create a resume.pdf file in the root directory.
+Run from the repository root. Answer `no` to render `mydata.json` without AI or API calls; answer `yes` to use the configured OpenAI key and submit the resume data and job description to OpenAI.
+
+The output is `Nir-Tuttnauer-Resume.pdf` in the repository root; an existing file with that name is overwritten. If executable discovery fails, ensure `wkhtmltopdf --version` works in the same shell.
+
+## Tests
+
+After installing the Python requirements, run the offline regression tests (no API key or PDF executable required):
+
+```sh
+python -m unittest discover -v
+```
 
 ## Project Structure
 
